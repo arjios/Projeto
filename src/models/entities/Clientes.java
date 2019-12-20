@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-public class Clientes  {
+public class Clientes {
 
     private String clienteNome;
     private String clienteCPF;
