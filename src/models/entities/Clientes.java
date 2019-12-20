@@ -1,5 +1,9 @@
 package entities;
 
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -19,9 +23,10 @@ public class Clientes  {
         // Construtor padrão
     }
 
-    public Clientes(final String cNome, final String cCPF, final String cEmail, final BufferedImage cClienteFoto) {
+    public Clientes(final String cNome, final String cCPF, final String cNasc, final String cEmail, final BufferedImage cClienteFoto) {
         this.clienteNome = cNome;
         this.clienteCPF = cCPF;
+        this.clienteNasc = cNasc;
         this.clienteEmail = cEmail;
         this.clienteFoto = cClienteFoto;
     }
@@ -32,6 +37,10 @@ public class Clientes  {
 
     public void setClienteCPF(final String clienteCPF) {
         this.clienteCPF = clienteCPF;
+    }
+
+    public void setClienteNasc(final String cNasc) {
+        this.clienteNasc = cNasc;
     }
 
     public void setClienteEmail(final String clienteEmail) {
@@ -48,6 +57,10 @@ public class Clientes  {
 
     public String getClienteCPF() {
         return this.clienteCPF;
+    }
+
+    public String getClienteNasc() {
+        return this.clienteNasc;
     }
 
     public String getClienteEmail() {
@@ -78,6 +91,8 @@ public class Clientes  {
                 this.clienteNome + 
                 "\nCPF..............: " +
                 this.clienteCPF +
+                "\nData Nascimento..: " +
+                this.clienteNasc +
                 "\nEmail............: " +
                 this.clienteEmail;
     }

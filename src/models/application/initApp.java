@@ -6,8 +6,7 @@ public class initApp {
 
     public static void main(String[] args) {
 
-        Clientes cli = new Clientes("Antonio", "885.461.368-15", "abc@gmail.com", null);
-        System.out.println(cli);
+        Clientes cli = new Clientes("Antonio", "885.461.368-15", "20021957", "abc@gmail.com", null);
         
     }
 
