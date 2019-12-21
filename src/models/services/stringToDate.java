@@ -15,8 +15,8 @@ public class stringToDate {
     }
     public void setStringToDate(String stringData) {
         dia = stringData.substring(0,2);
-        mes = stringData.substring(3,4);
-        ano = stringData.substring(5,8);
+        mes = stringData.substring(2,4);
+        ano = stringData.substring(4,8);
         this.stringData = dia + "/" + mes + "/" + ano;
         try {
             this.data=new SimpleDateFormat("dd/MM/yyyy").parse(this.stringData);
@@ -27,6 +27,7 @@ public class stringToDate {
         }
     }
     public String getStringData() {
+        System.out.println(this.stringData);
         return this.stringData;
     }
 

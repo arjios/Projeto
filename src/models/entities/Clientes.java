@@ -26,7 +26,7 @@ public class Clientes {
     public Clientes(final String cNome, final String cCPF, final String cNasc, final String cEmail, final BufferedImage cClienteFoto) {
         this.clienteNome = cNome;
         this.clienteCPF = cCPF;
-        this.clienteNasc = cNasc;
+        setClienteNasc(cNasc);
         this.clienteEmail = cEmail;
         this.clienteFoto = cClienteFoto;
     }
