@@ -1,8 +1,6 @@
 package entities;
 
-import java.util.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import utilidades;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -40,6 +38,7 @@ public class Clientes {
     }
 
     public void setClienteNasc(final String cNasc) {
+        final stringToDate std = new stringToDate(cNasc);
         this.clienteNasc = cNasc;
     }
 
@@ -79,8 +78,7 @@ public class Clientes {
             final byte[] clienteFotoBT = baos.toByteArray();
             baos.close();
             this.clienteFotoByte = clienteFotoBT;
-        }
-        catch (IOException ioe) {
+        } catch (final IOException ioe) {
             System.out.println(ioe.getMessage());
         }
     }
