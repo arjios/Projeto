@@ -1,10 +1,11 @@
 package entities;
 
-import utilidades;
+import services.stringToDate;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
@@ -16,6 +17,7 @@ public class Clientes {
     private String clienteEmail;
     private BufferedImage clienteFoto;
     private byte[] clienteFotoByte;
+    private stringToDate std;
 
     public Clientes () {
         // Construtor padrão
@@ -37,9 +39,10 @@ public class Clientes {
         this.clienteCPF = clienteCPF;
     }
 
-    public void setClienteNasc(final String cNasc) {
-        final stringToDate std = new stringToDate(cNasc);
-        this.clienteNasc = cNasc;
+    public void setClienteNasc(String cNasc) {
+        std = new stringToDate();
+        std.setStringToDate(cNasc); 
+        this.clienteNasc = std.getStringData();
     }
 
     public void setClienteEmail(final String clienteEmail) {

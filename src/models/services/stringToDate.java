@@ -1,4 +1,4 @@
-package utilidades;
+package services;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,7 +13,7 @@ public class stringToDate {
 
     public void stringToDate() {
     }
-    public void stringToDate(String stringData) {
+    public void setStringToDate(String stringData) {
         dia = stringData.substring(0,2);
         mes = stringData.substring(3,4);
         ano = stringData.substring(5,8);
