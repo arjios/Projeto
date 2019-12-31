@@ -1,6 +1,7 @@
 package entities;
 
 import services.stringToDate;
+import services.parseCPF;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -37,6 +38,8 @@ public class Clientes {
 
     public void setClienteCPF(final String clienteCPF) {
         this.clienteCPF = clienteCPF;
+        parseCPF pCPF = new parseCPF(clienteCPF);
+        this.clienteCPF = pCPF.getParseCPF();
     }
 
     public void setClienteNasc(String cNasc) {
