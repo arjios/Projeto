@@ -10,7 +10,7 @@ public class validaCPF {
     public void validaCPF() {
     }
     public void validaCPF(String cpf) {
-        this.stringCPF = cpf;
+        this.stringCpf = cpf;
 
     }
     private boolean isCPF(String cpf) {
@@ -35,7 +35,7 @@ public class validaCPF {
         return this.CPF;
     }
     private boolean isValor(String cpf) {
-        int div00, div01, div03;
+        int div00, div01, div02 = 0;
         boolean b = false;
         for(int i = 10; i > 1; --i) {
             int soma = soma + Integer.parseInt(cpf.substring(i-1, i)) * (i);
@@ -49,5 +49,5 @@ public class validaCPF {
             b = true;
         }
         return true;
-
+        }   
     }
