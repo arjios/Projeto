@@ -27,7 +27,6 @@ public class stringToDate {
         }
     }
     public String getStringData() {
-        System.out.println(this.stringData);
         return this.stringData;
     }
 

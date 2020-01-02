@@ -40,13 +40,13 @@ public class Clientes {
     public void setClienteCPF(String cCPF) {
         this.clienteCPF=cCPF;
         final isCPF boo = new isCPF();
-        System.out.println("\n CPF: Clientes.java - " + this.clienteCPF);
         if(boo.getIsCPF(this.clienteCPF)) {
-            System.out.println(this.clienteCPF);
             parseCPF pCPF = new parseCPF(this.clienteCPF);
             this.clienteCPF = pCPF.getParseCPF();
         }
-        System.out.println("\n FALSE: Clientes.java ");
+        else {
+            this.clienteCPF = null;
+        }
     }
 
     public void setClienteNasc(String cNasc) {
