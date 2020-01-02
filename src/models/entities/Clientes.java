@@ -2,6 +2,7 @@ package entities;
 
 import services.stringToDate;
 import services.parseCPF;
+import services.isCPF;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -26,7 +27,7 @@ public class Clientes {
 
     public Clientes(final String cNome, final String cCPF, final String cNasc, final String cEmail, final BufferedImage cClienteFoto) {
         this.clienteNome = cNome;
-        this.clienteCPF = cCPF;
+        setClienteCPF(cCPF);
         setClienteNasc(cNasc);
         this.clienteEmail = cEmail;
         this.clienteFoto = cClienteFoto;
@@ -36,10 +37,16 @@ public class Clientes {
         this.clienteNome = clienteNome;
     }
 
-    public void setClienteCPF(final String clienteCPF) {
-        this.clienteCPF = clienteCPF;
-        parseCPF pCPF = new parseCPF(clienteCPF);
-        this.clienteCPF = pCPF.getParseCPF();
+    public void setClienteCPF(String cCPF) {
+        this.clienteCPF=cCPF;
+        final isCPF boo = new isCPF();
+        System.out.println("\n CPF: Clientes.java - " + this.clienteCPF);
+        if(boo.getIsCPF(this.clienteCPF)) {
+            System.out.println(this.clienteCPF);
+            parseCPF pCPF = new parseCPF(this.clienteCPF);
+            this.clienteCPF = pCPF.getParseCPF();
+        }
+        System.out.println("\n FALSE: Clientes.java ");
     }
 
     public void setClienteNasc(String cNasc) {
