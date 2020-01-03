@@ -1,7 +1,5 @@
 package services;
 
-import java.text.ParseException;
-
 public class isCPF {
     
     private boolean iscpf = false;
