@@ -5,7 +5,7 @@ import java.util.List;
 
 import entities.veiculosCliente;
 
-public class parceiroCliente {
+public class parceiroCliente extends Clientes {
 
     private int idCli;
     private List<veiculosCliente> vCli = new ArrayList<>();

@@ -24,7 +24,7 @@ public class Clientes {
         // Construtor padrão
     }
 
-    public Clientes(final String cNome, final String cCPF, final String cNasc, final String cEmail, final BufferedImage cClienteFoto) {
+    public void setClientes(String cNome, String cCPF, String cNasc, String cEmail, BufferedImage cClienteFoto) {
         this.clienteNome = cNome;
         setClienteCPF(cCPF);
         setClienteNasc(cNasc);
@@ -44,7 +44,7 @@ public class Clientes {
             this.clienteCPF = pCPF.getParseCPF();
         }
         else {
-            this.clienteCPF = null;
+            this.clienteCPF = "CPF invalido!!!";
         }
     }
 
